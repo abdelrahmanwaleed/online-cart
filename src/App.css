@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background for contrast */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar styling */
+nav {
+  background: linear-gradient(
+    135deg,
+    #000 0%,
+    #333 100%
+  ); /* Black gradient background */
+  padding: 1rem 2rem; /* Padding for spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+  margin: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+  color: #ddd; /* Slightly lighter color on hover */
+  transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul li {
+    margin: 0.5rem 0;
   }
 }
